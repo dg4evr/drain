@@ -811,11 +811,23 @@ const MS_MODAL_STYLE = `
   flex: 1;
 }
 
-// give #ms-modal intro animation when appended active class
-.active {
-	  animation: slide-in-blurred-tr 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	  -webkit-animation: slide-in-blurred-tr 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+#ms-modal {
+	  animation: blur-in 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	  -webkit-animation: blur-in 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
+
+@keyframes blur-in {
+  0% {
+    -webkit-filter: blur(10px);
+			filter: blur(10px);
+	opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+	filter: blur(0);
+	opacity: 1;
+  }
+
 
 @-webkit-keyframes slide-in-blurred-tr {
   0% {
@@ -830,8 +842,8 @@ const MS_MODAL_STYLE = `
   100% {
     -webkit-transform: translate(0, 0) skew(0deg, 0deg);
             transform: translate(0, 0) skew(0deg, 0deg);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
     -webkit-filter: blur(0);
             filter: blur(0);
     opacity: 1;
@@ -845,15 +857,17 @@ const MS_MODAL_STYLE = `
             transform-origin: 0% 0%;
     -webkit-filter: blur(40px);
             filter: blur(40px);
+	background: rgba(0,0,0,0);
     opacity: 0;
   }
   100% {
     -webkit-transform: translate(0, 0) skew(0deg, 0deg);
             transform: translate(0, 0) skew(0deg, 0deg);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
     -webkit-filter: blur(0);
             filter: blur(0);
+	background: rgba(0,0,0,0.72);
     opacity: 1;
   }
 }
