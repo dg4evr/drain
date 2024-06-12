@@ -811,6 +811,20 @@ const MS_MODAL_STYLE = `
   flex: 1;
 }
 
+// give ms-modal intro animation
+.ms_modal {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.ms_modal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
   `;
 
 
@@ -1008,6 +1022,7 @@ const MSM = {
       modal_elem.id = 'ms-modal';
       modal_elem.innerHTML = modal_content;
       document.body.prepend(modal_elem);
+	  modal_elem.classList.add('active');
       if (mode == 2) MSM.connect_select = true;
       else MSM.connect_select = false;
       try {
