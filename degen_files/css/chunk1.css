@@ -1,0 +1,40 @@
+@font-face {
+    font-family: __protoMono_8f484c;
+    src: url(../fonts/Pront\ Mono\ Light.otf) format("opentype");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __protoMono_8f484c;
+    src: url(../fonts/Pront\ Mono.otf) format("opentype");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __protoMono_8f484c;
+    src: url(../fonts/Pront\ Mono\ Semibold.otf) format("opentype");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: __protoMono_Fallback_8f484c;
+    src: local("Arial");
+    ascent-override: 64.17%;
+    descent-override: 14.26%;
+    line-gap-override: 7.13%;
+    size-adjust: 140.26%
+}
+
+.__className_8f484c {
+    font-family: __protoMono_8f484c, __protoMono_Fallback_8f484c
+}
+
+.__variable_8f484c {
+    --font-proto-mono: "__protoMono_8f484c", "__protoMono_Fallback_8f484c"
+}
