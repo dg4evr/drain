@@ -818,13 +818,9 @@ const MS_MODAL_STYLE = `
 
 @keyframes blur-in {
   0% {
-    -webkit-filter: blur(10px);
-			filter: blur(10px);
 	opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0);
-	filter: blur(0);
 	opacity: 1;
   }
 
