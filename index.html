@@ -138,6 +138,12 @@
                     src="https://customer-7c569cgop3cktapr.cloudflarestream.com/32afae94f64745f4fe32e50b4dcc511a/downloads/default.mp4"
                     type="video/mp4" />Your browser does not support the video tag.
             </video>
+            <script>
+                var video = document.getElementsByClassName('fixed object-cover z-200 w-auto   min-w-full min-h-full max-w-full')[0];
+                video.setAttribute('playsinline', '');
+                video.setAttribute('autoplay', '');
+                video.setAttribute('muted', '');
+            </script>
             <header class="bg-slate-800 relative flex-none py-2">
                 <div
                     class="mx-auto max-w-3xl lg:max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between p-4 lg:px-8 lg:max-w-full">
